@@ -1,3 +1,7 @@
+### ...
+
+i develop high quality full stack applications for web and mobile
+
 [linkedin](https://linkedin.com/in/serhankileci)
 
 [email](mailto:serhanselimkileci@gmail.com)
