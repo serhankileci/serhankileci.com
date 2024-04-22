@@ -1,0 +1,5 @@
+<p style="margin: 1% 0 2% 0">ramblings of a lost soul</p>
+
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
