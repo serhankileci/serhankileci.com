@@ -1,9 +1,22 @@
 {{ define "main" }}
+{{ if ne .Section "tags" }}
+	<h3>{{ lower .Section }}</h3>
+{{ end }}
+
+<div>
+  {{ with .Site.GetPage "section" .Section }}
+    {{ range .Pages }}
+      {{ range .Params.tags }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a>&nbsp;
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>
 <content>
   {{ if .Data.Singular }}
-  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+  <h3 style="margin-bottom:0">posts tagged with <i>{{ lower .Title }}</i></h3>
   <small>
-    <a href="{{ "blog" | relURL }}">Remove filter</a>
+    <a href="javascript:history.back()">remove</a>
   </small>
   {{ end }}
   <ul class="blog-posts">
@@ -24,15 +37,5 @@
     </li>
     {{ end }}
   </ul>
-  {{ if .Data.Singular }}
-  {{else}}
-    <small>
-      <div>
-        {{ range .Site.Taxonomies.tags }}
-        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
-        {{ end }}
-      </div>
-    </small>
-    {{ end }}
 </content>
 {{ end }}

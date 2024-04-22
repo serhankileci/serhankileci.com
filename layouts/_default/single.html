@@ -1,17 +1,17 @@
-{{ define "main" }} {{ if eq .Type "blog" }}{{ if not .Params.menu }}
-<h1>{{ .Title }}</h1>
-<p>
+{{ define "main" }} {{ if ne .Title "About" }} {{ if not .Params.menu }}
+<h3>{{ .Title }}</h3>
+<i style="margin: 0 0 4% 0">{{ .Section }}</i>
+<p style="margin: 0 0 4% 0">
 	<i>
 		<time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
 			{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
 		</time>
 	</i>
-</p>
-{{ end }}{{ end }}
-<content> {{ .Content }} </content>
-<p>
 	{{ range (.GetTerms "tags") }}
-	<a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+	<a href="{{ .Permalink }}">#{{ lower .LinkTitle }}</a>
 	{{ end }}
 </p>
+{{ end }} {{ end }}
+
+<content> {{ .Content }} </content>
 {{ end }}
