@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h3>latest</h3>
 <div>
-	{{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+	{{ range where .Site.RegularPages "Title" "!=" "About" | last 10 }}
 	<div>
 		<span><i>{{ .Date.Format "Jan 2, 2006" }}</i></span> -
 		<a href="{{ .Permalink }}">{{ .Title }}</a>
