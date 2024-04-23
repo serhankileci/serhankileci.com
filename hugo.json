@@ -14,11 +14,6 @@
 				"name": "programming",
 				"url": "/programming",
 				"weight": 2
-			},
-			{
-				"name": "writing",
-				"url": "/writing",
-				"weight": 3
 			}
 		]
 	}
