@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Serhan Kileci</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on Serhan Kileci</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Apr 2024 18:26:36 +0300</lastBuildDate>
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General</title>
+      <link>https://example.org/tags/general/</link>
+      <pubDate>Sat, 20 Apr 2024 18:26:36 +0300</pubDate>
+      <guid>https://example.org/tags/general/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

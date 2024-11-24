@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+				
+					Intro to Programming | Serhan Kileci
+			
+				</title>
+<meta name="title" content="Intro to Programming" />
+<meta
+	name="description"
+	content="I believe learning these before getting into coding will help beginners tremendously. The more backstory they know, the better, because they tend to have these unanswered questions in their mind and they either don&rsquo;t ask them or they get buried with some answer they came up with on their own to them. I call these gaps of knowledge that eventually get filled in time piece by piece, but ideally some of them should be learned at the foundation level."
+/>
+<meta name="keywords" content="general," />
+
+
+<meta property="og:url" content="https://example.org/programming/intro-to-programming/">
+  <meta property="og:site_name" content="Serhan Kileci">
+  <meta property="og:title" content="Intro to Programming">
+  <meta property="og:description" content="I believe learning these before getting into coding will help beginners tremendously. The more backstory they know, the better, because they tend to have these unanswered questions in their mind and they either don’t ask them or they get buried with some answer they came up with on their own to them. I call these gaps of knowledge that eventually get filled in time piece by piece, but ideally some of them should be learned at the foundation level.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programming">
+    <meta property="article:published_time" content="2024-04-20T18:26:36+03:00">
+    <meta property="article:modified_time" content="2024-04-20T18:26:36+03:00">
+    <meta property="article:tag" content="General">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Intro to Programming">
+  <meta name="twitter:description" content="I believe learning these before getting into coding will help beginners tremendously. The more backstory they know, the better, because they tend to have these unanswered questions in their mind and they either don’t ask them or they get buried with some answer they came up with on their own to them. I call these gaps of knowledge that eventually get filled in time piece by piece, but ideally some of them should be learned at the foundation level.">
+
+
+
+
+  <meta itemprop="name" content="Intro to Programming">
+  <meta itemprop="description" content="I believe learning these before getting into coding will help beginners tremendously. The more backstory they know, the better, because they tend to have these unanswered questions in their mind and they either don’t ask them or they get buried with some answer they came up with on their own to them. I call these gaps of knowledge that eventually get filled in time piece by piece, but ideally some of them should be learned at the foundation level.">
+  <meta itemprop="datePublished" content="2024-04-20T18:26:36+03:00">
+  <meta itemprop="dateModified" content="2024-04-20T18:26:36+03:00">
+  <meta itemprop="wordCount" content="395">
+  <meta itemprop="keywords" content="General">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+		<style>
+	html,
+	body {
+		height: 90vh;
+		overflow-y: hidden;
+	}
+	body {
+		font-family: Verdana;
+		margin: auto;
+		padding: 20px;
+		max-width: 720px;
+		text-align: left;
+		background-color: #fff;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		line-height: 1.5;
+		color: #444;
+	}
+
+	main {
+		border-radius: 1%;
+		padding: 0% 2%;
+		position: relative;
+		top: 4%;
+		font-size: 16px;
+		overflow-y: auto;
+		height: 70vh;
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong,
+	b {
+		color: #222;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: #3273dc;
+	}
+
+	.title {
+		text-decoration: none;
+		border: 0;
+	}
+
+	.title span {
+		font-weight: 400;
+	}
+
+	nav a {
+		margin-right: 10px;
+	}
+
+	textarea {
+		width: 100%;
+		font-size: 16px;
+	}
+
+	input {
+		font-size: 16px;
+	}
+
+	content {
+		line-height: 1.6;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	code {
+		padding: 2px 5px;
+		background-color: #f2f2f2;
+	}
+
+	pre code {
+		color: #222;
+		display: block;
+		padding: 20px;
+		white-space: pre-wrap;
+		font-size: 14px;
+		overflow-x: auto;
+	}
+
+	div.highlight pre {
+		background-color: initial;
+		color: initial;
+	}
+
+	div.highlight code {
+		background-color: unset;
+		color: unset;
+	}
+
+	blockquote {
+		border-left: 1px solid #999;
+		color: #222;
+		padding-left: 20px;
+		font-style: italic;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	.helptext {
+		color: #777;
+		font-size: small;
+	}
+
+	.errorlist {
+		color: #eba613;
+		font-size: small;
+	}
+
+	ul.blog-posts {
+		list-style-type: none;
+		padding: unset;
+	}
+
+	ul.blog-posts li {
+		display: flex;
+	}
+
+	ul.blog-posts li span {
+		flex: 0 0 130px;
+	}
+
+	ul.blog-posts li a:visited {
+		color: #8b6fcb;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #333;
+			color: #ddd;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		strong,
+		b {
+			color: #eee;
+		}
+
+		a {
+			color: #8cc2dd;
+		}
+
+		code {
+			background-color: #777;
+		}
+
+		pre code {
+			color: #ddd;
+		}
+
+		blockquote {
+			color: #ccc;
+		}
+
+		textarea,
+		input {
+			background-color: #252525;
+			color: #ddd;
+		}
+
+		.helptext {
+			color: #aaa;
+		}
+	}
+</style>
+</head>
+
+	<body>
+		<header><a href="/" class="title" style="display: inline-block; margin-top: 5%; padding: 0;">
+	<h2 style="display: inline-block; margin: 0; padding: 0;">Serhan Kileci</h2>
+</a>
+
+<nav><p style="margin: 1% 0 2% 0">incoherent ramblings</p>
+
+
+<a href="/about">about</a>
+
+<a href="/programming">programming</a>
+
+</nav>
+</header>
+		<main>  
+<h3>Intro to Programming</h3>
+<i style="margin: 0 0 4% 0">programming</i>
+<p style="margin: 0 0 4% 0">
+	<i>
+		<time datetime='2024-04-20' pubdate>
+			20 Apr, 2024
+		</time>
+	</i>
+	
+	<a href="https://example.org/tags/general/">#general</a>
+	
+</p>
+ 
+
+<content> <p>I believe learning these before getting into coding will help beginners tremendously. The more backstory they know, the better, because they tend to have these unanswered questions in their mind and they either don&rsquo;t ask them or they get buried with some answer they came up with on their own to them. I call these gaps of knowledge that eventually get filled in time piece by piece, but ideally some of them should be learned at the foundation level. It&rsquo;s related to &ldquo;learn concepts, not technologies&rdquo;; when you know how different things function at a lower level, you can pick up new technologies because they are all tied to those concepts.</p>
+<p>A programming language is a tool. Different languages have their own advantages and disadvantages depending on their purposes. You learn programming concepts prevalent in all languages and make a calculated decision to use a specific language for a business requirement when you need to. When you&rsquo;re building an application, you will have state; data that can be in-memory or written somewhere more persistent like a database. You can think of data as input, and whatever you to that input or with that input to achieve a certain goal is output. developer, you deal with data via data structures, you mold data into a shape that makes sense for the application requirements.</p>
+<p>There are principles that are generally agreed upon, in order to achieve maximum efficiency as a developer, for both the developers’ sake as well as business requirements’ sake. The following is my own list of software philosophies which may or may not include the aforementioned principles:</p>
+<p>Avoid side-effects</p>
+<p>Avoid non-standard fallbacks</p>
+<p>Avoid magic</p>
+<p>Explicit over implicit, verbose and direct over short and polluted</p>
+<p>Hierarchical organization and structure</p>
+<p>You can never have too much decoupling or too many pure functions</p>
+<p>Self-explanatory code via aptly named variables and minimal comments, also quality of code and consistent data structures that act as living documentation</p>
+<p>Convention over Configuration (provide configuration but ditch it where it interrupts convention)</p>
+<p>Principle of Least Surprise (provide what the developer would expect, i.e. the standard)</p>
+<p>Proper testing, knowing what to test, etc.</p>
+<p>These principles can never be absolute and fit any situation and in maximum capacity. This is a common problem in software.</p>
+<p>A design pattern is a solution to a common problem. A problem common enough to warrant a universal solution.</p>
+ </content>
+</main>
+		<footer> 
+</footer>
+	</body>
+</html>
