@@ -1,7 +1,8 @@
 {{ define "main" }}
 <h3 style="user-select: none; -webkit-user-select: none; cursor: default;">latest</h3>
-<ul class="blog-posts">
-	{{ $pages := where .Site.RegularPages "Title" "!=" "About" }}
+<ul class="blog-posts content-latest">
+	{{ $pages := where .Site.RegularPages "Title" "!=" "about" }}
+	{{ $pages = where $pages "Title" "!=" "subjects" }}
 	{{ if $pages }}
 		{{ range last 10 $pages }}
 		<div>
