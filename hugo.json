@@ -1,19 +1,47 @@
 {
-	"baseURL": "https://example.org/",
+	"baseURL": "https://serhankileci.com/",
 	"languageCode": "en-us",
 	"title": "Serhan Kileci",
 	"theme": "",
+	"buildDrafts": true,
+	"markup": {
+		"goldmark": {
+			"renderer": {
+				"unsafe": true
+			}
+		}
+	},
 	"menus": {
 		"main": [
 			{
-				"name": "about",
-				"url": "/about",
+				"name": "home",
+				"url": "/",
 				"weight": 1
 			},
 			{
-				"name": "programming",
-				"url": "/programming",
+				"name": "about",
+				"url": "/about",
 				"weight": 2
+			},
+			{
+				"name": "literary",
+				"url": "/literary",
+				"weight": 3
+			},
+			{
+				"name": "software",
+				"url": "/software",
+				"weight": 4
+			},
+			{
+				"name": "psychology",
+				"url": "/psychology",
+				"weight": 5
+			},
+			{
+				"name": "humanities",
+				"url": "/humanities",
+				"weight": 6
 			}
 		]
 	}
