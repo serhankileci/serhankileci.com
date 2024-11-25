@@ -1,5 +1,5 @@
-<p style="margin: 1% 0 2% 0">incoherent ramblings</p>
+<p style="margin: 1% 0 2% 0; user-select: none; -webkit-user-select: none; cursor: default;">writer, software developer</p>
 
 {{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
+<a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}

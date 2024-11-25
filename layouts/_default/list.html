@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{ if ne .Section "tags" }}
-	<h3>{{ lower .Section }}</h3>
+	<h3 style="user-select: none; -webkit-user-select: none; cursor: default;">{{ lower .Section }}</h3>
 {{ end }}
 
 <div>
@@ -28,16 +28,19 @@
   {{ end }}
   <ul class="blog-posts">
     {{ range .Pages }}
-    <li>
-      <span>
-        <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-            {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-          </time>
-        </i>
-      </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
+    <div>
+		{{ if .Draft }}
+		<div style="display: flex; cursor: default; user-select: none; -webkit-user-select: none;">
+			<p style="width: 20%;"><i>soon</i></p>
+			<p style="opacity: 75%;">{{ .Title }}</p>
+		</div>
+		{{ else }}
+		<div style="display: flex;">
+			<p style="width: 20%;"><i>{{ .Date.Format "Jan 2, 2006" }}</i></p>
+			<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+		</div>
+		{{ end }}
+	</div>
     {{ else }}
     <li>
       No posts yet

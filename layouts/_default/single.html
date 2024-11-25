@@ -1,4 +1,6 @@
 {{ define "main" }} {{ if ne .Title "About" }} {{ if not .Params.menu }}
+<a href="javascript:history.back()" style="font-style: italic; cursor: default; user-select: none; -webkit-user-select: none;">back</a>
+
 <h3>{{ .Title }}</h3>
 <i style="margin: 0 0 4% 0">{{ .Section }}</i>
 <p style="margin: 0 0 4% 0">
