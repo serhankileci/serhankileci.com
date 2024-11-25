@@ -1,20 +1,25 @@
 <!-- <a href="{{ "" | relURL }}" class="title" style="display: inline-block; margin-top: 5%; padding: 0;">
 	<h2 style="display: inline-block; margin: 0; padding: 0;">{{ .Site.Title }}</h2>
 </a> -->
-<div style="display: flex; margin-top: 4%; justify-content: space-between;">
-	<div style="display: grid;">
-		<a class="title" style="display: inline-block; padding: 0;">
-			<h2 style="display: inline-block; margin: 0; padding: 0; cursor: default; user-select: none; -webkit-user-select: none;">{{ .Site.Title }}</h2>
-		</a>
-		<nav>{{- partial "nav.html" . -}}</nav>
+<div style="display: flex; position: relative; margin-top: 4%;">
+	<div style="display: flex; height: fit-content; gap: 5%;">
+		<img style="border-radius: 100%; align-self: center; width: 12%; height: 12%;" src="/avatar.png" />
+		<div style="display: grid;">
+			<a class="title" style="display: inline-block; padding: 0;">
+				<h2 style="display: inline-block; margin: 0; padding: 0; cursor: default; user-select: none; -webkit-user-select: none;">{{ .Site.Title }}</h2>
+			</a>
+			<nav>{{- partial "nav.html" . -}}</nav>
+		</div>
 	</div>
-	<div style="display: grid; align-self: center; gap: 10%;">
-		<p style="font-size: small; display: flex; justify-content: flex-end; user-select: none; -webkit-user-select: none; cursor: default;"><span style="padding-left: 2%; padding-right: 2%;">📍</span> istanbul, turkey</p>
-		<div style="display: flex; gap: 4%; justify-content: end;">
+	<div style="width: 35%; display: flex; flex-direction: column;">
+		<div style="display: flex; gap: 4%; justify-content: flex-end;">
 			<a style="width: fit-content; user-select: none; -webkit-user-select: none;" href="https://open.spotify.com/user/cole8riley?si=09f53e9a4b1048af"><img style="width: 2rem;" src="/spotify.png" /></a>
 			<a style="width: fit-content; user-select: none; -webkit-user-select: none;" href="https://instagram.com/serhankileci"><img style="width: 2rem;" src="/instagram.png" /></a>
 		</div>
-		<p style="font-size: small; user-select: none; -webkit-user-select: none; cursor: default;">reading <a href="https://www.goodreads.com/book/show/67891.The_Undiscovered_Self" target="_blank"><i>the undiscovered self</i></a></p>
+		<p style="text-overflow: ellipsis; font-size: small; user-select: none; -webkit-user-select: none; cursor: default; width: 100%; white-space: nowrap; overflow: hidden;">
+			reading <a href="https://www.goodreads.com/book/show/67891.The_Undiscovered_Self" target="_blank"><i>the undiscovered self by jung</i></a>
+		</p>
+		<p style="font-size: small; justify-content: flex-end; display: flex; user-select: none; -webkit-user-select: none; cursor: default;"><span style="padding-left: 2%; padding-right: 2%;">📍</span> istanbul, turkey</p>
 	</div>
 </div>
 
