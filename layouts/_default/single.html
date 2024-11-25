@@ -1,19 +1,27 @@
-{{ define "main" }} {{ if ne .Title "About" }} {{ if not .Params.menu }}
-<a href="javascript:history.back()" style="font-style: italic; cursor: default; user-select: none; -webkit-user-select: none;">back</a>
+{{ define "main" }}
+
+{{ if and (ne .Path "/subjects") (ne .Path "/about") }}
+<a href="javascript:history.back()" style="cursor: default; user-select: none; -webkit-user-select: none;">back</a>
+<br />
+<br />
+{{ end }}
+
 
 <h3>{{ .Title }}</h3>
-<i style="margin: 0 0 4% 0">{{ .Section }}</i>
-<p style="margin: 0 0 4% 0">
-	<i>
-		<time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-			{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-		</time>
-	</i>
+<!-- <i style="margin: 0 0 4% 0">{{ .Section }}</i> -->
+<p style="margin: 0 0 3% 0">
+	{{ if and (ne .Path "/subjects") (ne .Path "/about") }}
+		<i>
+			<time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+				{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+			</time>
+		</i>
+	{{ end }}
 	{{ range (.GetTerms "tags") }}
 	<a href="{{ .Permalink }}">#{{ lower .LinkTitle }}</a>
 	{{ end }}
 </p>
-{{ end }} {{ end }}
 
-<content> {{ .Content }} </content>
+
+<div class="content-single"> {{ .Content }} </div>
 {{ end }}
