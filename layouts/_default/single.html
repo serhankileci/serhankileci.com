@@ -1,14 +1,17 @@
 {{ define "main" }}
 
-{{ if and (ne .Path "/subjects") (ne .Path "/about") }}
+<!-- {{ if and (ne .Path "/subjects") (ne .Path "/about") }}
 <a href="javascript:history.back()" style="cursor: default; user-select: none; -webkit-user-select: none;">back</a>
 <br />
 <br />
-{{ end }}
+{{ end }} -->
 
+{{ if .Draft }}
+	<p>you shouldn't be here! this is a draft!</p>
+{{ else }}
 
 <h3>{{ .Title }}</h3>
-<!-- <i style="margin: 0 0 4% 0">{{ .Section }}</i> -->
+<a href="/{{ .Section }}"><i style="margin: 0 0 4% 0">{{ .Section }}</i></a>
 <p style="margin: 0 0 3% 0">
 	{{ if and (ne .Path "/subjects") (ne .Path "/about") }}
 		<i>
@@ -24,4 +27,5 @@
 
 
 <div class="content-single"> {{ .Content }} </div>
+{{ end }}
 {{ end }}
