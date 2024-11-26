@@ -1,4 +1,109 @@
 <style>
+	.header-box {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		height: fit-content;
+		gap: 2.5%;
+		align-items: center;
+		margin-top: 4%;
+	}
+
+	@media (max-width: 768px) {
+		.header-box {
+			gap: 4%;
+			padding-bottom: 2%;
+		}
+	}
+
+	.avatar {
+		border-radius: 100%;
+		align-self: center;
+		width: 10%;
+		height: 10%;
+	}
+
+	@media (max-width: 768px) {
+		.avatar {
+			width: 20%;
+			height: 20%;
+		}
+	}
+
+	.post-date {
+		font-size: 0.9rem;
+		width: 15%;
+	}
+
+	@media (max-width: 768px) {
+		.post-date {
+			font-size: 0.8rem;
+			width: 20%;
+		}
+	}
+
+	.post-category-box {
+		width: 20%;
+	}
+
+	@media (max-width: 768px) {
+		.post-category-box {
+			width: 20%;
+		}
+	}
+
+	.post-title-and-category-box {
+		display: flex;
+		width: 75%;
+		gap: 4%;
+	}
+
+	@media (max-width: 768px) {
+		.post-title-and-category-box {
+			display: flex;
+			width: 75%;
+			gap: 4%;
+		}
+	}
+
+	.post-category {
+		width: fit-content;
+		font-size: 0.9rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	@media (max-width: 768px) {
+		.post-category {
+			width: fit-content;
+			font-size: 0.9rem;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+
+	.post-title {
+		text-overflow: ellipsis;
+		width: 80%;
+		text-align: justify;
+		white-space: nowrap;
+		overflow: hidden;
+		opacity: 75%;
+	}
+
+	@media (max-width: 768px) {
+		.post-title {
+			text-overflow: ellipsis;
+			width: 80%;
+			text-align: justify;
+			white-space: nowrap;
+			overflow: hidden;
+			opacity: 75%;
+		}
+	}
+
 	.tooltip {
 		position: relative;
 		display: inline-block;
@@ -108,7 +213,7 @@
 		height: 26.1rem;
 	}
 
-	.content-latest {
+	.content-home {
 		line-height: 1.6;
 		overflow-y: scroll;
 		position: relative;

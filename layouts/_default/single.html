@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<!-- {{ if and (ne .Path "/subjects") (ne .Path "/about") }}
+<!-- {{ if and (ne .Path "/topics") (ne .Path "/about") }}
 <a href="javascript:history.back()" style="cursor: default; user-select: none; -webkit-user-select: none;">back</a>
 <br />
 <br />
@@ -10,10 +10,10 @@
 	<p>you shouldn't be here! this is a draft!</p>
 {{ else }}
 
-<h3>{{ .Title }}</h3>
+<h3 {{ if or (eq .Path "/topics") (eq .Path "/about") }} style="user-select: none; -webkit-user-select: none; cursor: default;" {{ end }}>{{ .Title }}</h3>
 <a href="/{{ .Section }}"><i style="margin: 0 0 4% 0">{{ .Section }}</i></a>
 <p style="margin: 0 0 3% 0">
-	{{ if and (ne .Path "/subjects") (ne .Path "/about") }}
+	{{ if and (ne .Path "/topics") (ne .Path "/about") }}
 		<i>
 			<time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
 				{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}

@@ -1,9 +1,7 @@
-<p style="margin: 1% 0 2% 0; user-select: none; -webkit-user-select: none; cursor: default;">writer, software developer</p>
-
 <!-- {{ range .Site.Menus.main }}
 <a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="{{ .URL }}">{{ .Name }}</a>
 {{ end }} -->
 
-<a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="/">latest</a>
-<a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="/about">about</a>
-<a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="/subjects">subjects</a>
+<a href="/"{{ if eq .Path "/" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>home</a>
+<a href="/about"{{ if eq .Path "/about" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>about</a>
+<a href="/topics"{{ if eq .Path "/topics" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>topics</a>
