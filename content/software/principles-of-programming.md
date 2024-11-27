@@ -1,5 +1,5 @@
 ---
-title: "💾 intro to programming"
+title: "💾 principles of programming"
 date: 2024-04-20T18:26:36+03:00
 draft: true
 ---

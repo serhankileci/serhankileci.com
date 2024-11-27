@@ -1,5 +1,5 @@
 ---
-title: "🙇‍♂️ the great barrier of communication"
+title: "🙇‍♂️ the great barrier of human communication"
 date: 2024-04-20T18:26:36+03:00
 draft: true
 ---
