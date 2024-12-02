@@ -1,7 +1,8 @@
 ---
-title: "🧐 studying your own self"
+title: "studying your own self"
 date: 2024-04-20T18:26:36+03:00
 draft: true
+soon: false
 ---
 
 One’s self is manyfold; he who observes, thinks, and speaks inward — and he who passively listens to the other, and reacts. He whose personality varies based on his externals, he whose mind contradicts himself because his heart has a mind of its own.

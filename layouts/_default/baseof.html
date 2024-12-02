@@ -28,10 +28,10 @@
 		<!-- being able to go back and forth between the same subject posts would be cool -->
 		<!-- {{ if or (.Prev) (.Next) }}
 		<div style="display: flex; justify-content: space-between; padding-top: 2%; padding-bottom: 2%;">
-			{{ if and (.Prev) (ne .Path "/topics") (ne .Path "/about") (ne .Path "/") }}
+			{{ if and (.Prev) (ne .Path "/categories") (ne .Path "/about") (ne .Path "/") }}
 				<a href="{{ .Prev.Permalink }}" style="cursor: default; user-select: none; -webkit-user-select: none;">previous</a>
 			{{ end }}
-			{{ if and (.Next) (ne .Path "/topics") (ne .Path "/about") (ne .Path "/") }}
+			{{ if and (.Next) (ne .Path "/categories") (ne .Path "/about") (ne .Path "/") }}
 				<a href="{{ .Next.Permalink }}" style="cursor: default; user-select: none; -webkit-user-select: none;">next</a>
 			{{ end }}
 		</div>

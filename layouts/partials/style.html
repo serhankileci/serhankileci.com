@@ -1,18 +1,19 @@
 <style>
 	.header-box {
 		display: flex;
-		justify-content: center;
+		justify-content: left;
 		position: relative;
 		height: fit-content;
-		gap: 2.5%;
+		gap: 3%;
 		align-items: center;
 		margin-top: 4%;
+		padding-bottom: 1%;
 	}
 
 	@media (max-width: 768px) {
 		.header-box {
-			gap: 4%;
-			padding-bottom: 2%;
+			justify-content: space-around;
+			padding-bottom: 3%;
 		}
 	}
 
@@ -48,21 +49,26 @@
 
 	@media (max-width: 768px) {
 		.post-category-box {
-			width: 20%;
+			min-width: 25%;
+			width: 25%;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 	}
 
 	.post-title-and-category-box {
 		display: flex;
-		width: 75%;
+		width: 100%;
 		gap: 4%;
 	}
 
 	@media (max-width: 768px) {
 		.post-title-and-category-box {
 			display: flex;
-			width: 75%;
+			align-items: center;
+			width: 100%;
 			gap: 4%;
+			text-overflow: ellipsis;
 		}
 	}
 
@@ -86,7 +92,7 @@
 
 	.post-title {
 		text-overflow: ellipsis;
-		width: 80%;
+		width: fit-content;
 		text-align: justify;
 		white-space: nowrap;
 		overflow: hidden;
@@ -96,12 +102,14 @@
 	@media (max-width: 768px) {
 		.post-title {
 			text-overflow: ellipsis;
-			width: 80%;
-			text-align: justify;
-			white-space: nowrap;
-			overflow: hidden;
-			opacity: 75%;
+			width: fit-content;
+			white-space: wrap;
+			word-break: break-all;
 		}
+	}
+
+	.draft {
+		opacity: 70%;
 	}
 
 	.tooltip {

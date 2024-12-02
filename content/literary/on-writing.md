@@ -1,7 +1,8 @@
 ---
-title: "✍️ on writing (what your soul wants to)"
+title: "on writing"
 date: 2024-11-24T18:26:36+03:00
 draft: true
+soon: true
 ---
 
 writing what your soul wants you to

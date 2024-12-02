@@ -2,30 +2,38 @@
 <h3 style="user-select: none; -webkit-user-select: none; cursor: default;">latest</h3>
 <ul class="blog-posts content-home">
 	{{ $pages := where .Site.RegularPages "Title" "!=" "about" }}
-	{{ $pages = where $pages "Title" "!=" "topics" }}
+	{{ $pages = where $pages "Title" "!=" "categories" }}
 	{{ if $pages }}
 		{{ range last 10 $pages }}
 		<div>
-			{{ if .Draft }}
-			<div style="display: flex; cursor: default; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
-				<p class="post-date"><i>soon</i></p>
-				<div class="post-title-and-category-box">
-					<div class="post-category-box">
-						<a href="{{ .Section }}" class="post-category"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
+			{{ if or (.Draft) (.Params.soon) }}
+				{{ if not .Params.hidden }}
+					<div style="display: flex; cursor: default; align-items: center; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
+						<p class="post-date" style="text-align: center;"><i>
+							{{ if and (eq .Params.soon true) }}
+								soon
+							{{ else }}
+								draft
+							{{ end }}
+						</i></p>
+						<div class="post-title-and-category-box">
+							<div class="post-category-box">
+								<a href="{{ .Section }}" class="post-category"><i>#{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
+							</div>
+							<p class="post-title" style="cursor: not-allowed;">{{ .Title }}</p>
+						</div>
 					</div>
-					<p class="post-title">{{ .Title }}</p>
-				</div>
-			</div>
+				{{ end }}
 			{{ else }}
-			<div style="display: flex; cursor: default; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
-				<p class="post-date"><i>{{ .Date.Format "Jan 2, 2006" }}</i></p>
-				<div class="post-title-and-category-box">
-					<div class="post-category-box">
-						<a href="{{ .Section }}" class="post-category"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
+				<div style="display: flex; cursor: default; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
+					<p class="post-date"><i>{{ .Date.Format "Jan 2, 2006" }}</i></p>
+					<div class="post-title-and-category-box">
+						<div class="post-category-box">
+							<a href="{{ .Section }}" class="post-category"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
+						</div>
+						<p class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
 					</div>
-					<p class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
 				</div>
-			</div>
 			{{ end }}
 		</div>
 		{{ end }}

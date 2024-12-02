@@ -1,7 +1,8 @@
 ---
-title: "🤔 low latent inhibition"
+title: "low latent inhibition"
 date: 2024-04-20T18:26:36+03:00
 draft: true
+soon: true
 ---
 
 In order to even attempt to explain what low latent inhibition is, I feel it is vital that an understanding of the term “latent inhibition” is reached. Latent inhibition is a term used to explain how our observation of a familiar stimulus (e.g. something we see, hear, smell, feel or taste that we’ve had before) takes longer to acquire meaning than a new stimulus. It’s essentially a mental tool you develop in order to experience the world in a manageable way. You use latent inhibition in your day-to-day interactions with the environment.
