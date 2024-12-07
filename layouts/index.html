@@ -4,21 +4,24 @@
 <table style="table-layout: fixed;" class="select-none cursor-default">
 	{{ $pages := where .Site.RegularPages "Title" "!=" "about" }}
 	{{ $pages = where $pages "Title" "!=" "categories" }}
-	{{ if $pages }}
+	{{ $pages = where $pages "Draft" "!=" true }}
+	{{ if gt (len $pages) 0 }}
 		{{ range last 10 $pages }}
-			{{ if not (.Draft) }}
-					<tr>
-						<td>
-							<p style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></p>
-						</td>
-						<td style="padding-left: 2%;" class="title">
-							<a href="{{ .Page.Path }}" class="post-title select-text">{{ .Title }}</a>
-						</td>
-					</tr>
-			{{ end }}
+			<tr>
+				<td>
+					<p style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+						<i>{{ slicestr (path.Dir .Page.Path) 1 }}</i>
+					</p>
+				</td>
+				<td style="padding-left: 2%;" class="title">
+					<a href="{{ .Page.Path }}" class="post-title select-text">{{ .Title }}</a>
+				</td>
+			</tr>
 		{{ end }}
 	{{ else }}
-		<p>no posts yet</p>
+		<tr>
+			<td colspan="2" style="text-align: center;">no posts yet</td>
+		</tr>
 	{{ end }}
 </table>
 {{ end }}
