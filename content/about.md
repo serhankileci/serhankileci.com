@@ -17,9 +17,7 @@ draft: false
 
 <br />
 
-as a passion, i write (currently, a novel)
-
-*professionally*, i develop high-quality software for the web and mobile
+i write as a passion, and professionally i develop high-quality software for the web and mobile
 
 - 💼 <a target="_blank" href="https://linkedin.com/in/serhankileci">linkedin</a>
 - ✉️ [email](mailto:serhanselimkileci@gmail.com)

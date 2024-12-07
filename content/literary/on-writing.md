@@ -1,8 +1,7 @@
 ---
 title: "on writing"
 date: 2024-11-24T18:26:36+03:00
-draft: true
-soon: true
+draft: false
 ---
 
 writing what your soul wants you to

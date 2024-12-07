@@ -2,7 +2,6 @@
 title: "the value of testimony is back! (almost)"
 date: 2024-04-20T18:26:36+03:00
 draft: true
-soon: false
 ---
 
 While testimony is already valued since people can slander and there will be the connotation of that slander lingering etcout there in the world with new people.

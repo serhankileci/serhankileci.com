@@ -1,9 +1,10 @@
 ---
 title: "low latent inhibition"
 date: 2024-04-20T18:26:36+03:00
-draft: true
-soon: true
+draft: false
 ---
+
+i have low latent inhibition. latent inhibition refers to the brain’s ability to filter out stimuli it’s familiar with, so when someone has low latent inhibition they’re more aware of everyday details that others might overlook, resulting in a heightened sense of awareness and creativity, as they notice and process more information, but the downside is that they’re prone to sensory overload
 
 In order to even attempt to explain what low latent inhibition is, I feel it is vital that an understanding of the term “latent inhibition” is reached. Latent inhibition is a term used to explain how our observation of a familiar stimulus (e.g. something we see, hear, smell, feel or taste that we’ve had before) takes longer to acquire meaning than a new stimulus. It’s essentially a mental tool you develop in order to experience the world in a manageable way. You use latent inhibition in your day-to-day interactions with the environment.
 
