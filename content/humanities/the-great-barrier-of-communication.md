@@ -1,7 +1,7 @@
 ---
 title: "the great barrier of human communication"
 date: 2024-04-20T18:26:36+03:00
-draft: false
+draft: true
 ---
 
 So many books, poems, scientific facts, historical quotes, and even words spoken to one another have been and are vastly misinterpreted because they are not crystal clear, and even if there is a deeper meaning, it is not explained anywhere else by its originator. This phenomena, naturally throughout history, birthed concepts like the Death of the Author, etc.
