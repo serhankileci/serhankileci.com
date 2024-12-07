@@ -1,17 +1,7 @@
 {{ define "main" }}
 
-<!-- {{ if and (ne .Path "/categories") (ne .Path "/about") }}
-<a href="javascript:history.back()" style="cursor: default; user-select: none; -webkit-user-select: none;">back</a>
-<br />
-<br />
-{{ end }} -->
-
-{{ if .Draft }}
-	<p>you shouldn't be here! this is a draft!</p>
-{{ else }}
-
 <h3 {{ if or (eq .Path "/categories") (eq .Path "/about") }} style="user-select: none; -webkit-user-select: none; cursor: default;" {{ end }}>{{ .Title }}</h3>
-<a href="/{{ .Section }}"><i style="margin: 0 0 4% 0">{{ .Section }}</i></a>
+<p><i style="margin: 0 0 4% 0">{{ .Section }}</i></p>
 <p style="margin: 0 0 3% 0">
 	{{ if and (ne .Path "/categories") (ne .Path "/about") }}
 		<i>
@@ -20,12 +10,8 @@
 			</time>
 		</i>
 	{{ end }}
-	{{ range (.GetTerms "tags") }}
-	<a href="{{ .Permalink }}">#{{ lower .LinkTitle }}</a>
-	{{ end }}
 </p>
 
 
 <div class="content-single"> {{ .Content }} </div>
-{{ end }}
 {{ end }}

@@ -6,13 +6,9 @@
 		{{- partial "favicon.html" . -}}
 		<title>
 			{{- block "title" . }}
-				{{ if eq .Title "Serhan Kileci" }}
 					{{ .Site.Title }}
-				{{ else }}
-					{{ trim .Title "s" }} | {{ .Site.Title }}
-			{{ end }}
-		{{- end }}
-				</title>
+			{{- end }}
+		</title>
 
 		{{- partial "seo_tags.html" . -}}
 		<meta name="referrer" content="no-referrer-when-downgrade" />
@@ -38,11 +34,11 @@
 		{{ end }} -->
 		</div>
 		<div style="display: grid; gap: 14%">
-		<div style="display: flex; justify-content: center;">
-			<div style="font-size: small; user-select: none; -webkit-user-select: none; cursor: default;">
-				<p>reading <a href="https://www.goodreads.com/book/show/52373.Regarding_the_Pain_of_Others" target="_blank"><i>regarding the pain of others</i></a> by susan sontag</p>
+			<div style="display: flex; justify-content: center;">
+				<div style="font-size: small; user-select: none; -webkit-user-select: none; cursor: default;">
+					<p>currently reading <a class="cursor-pointer" href="https://www.goodreads.com/book/show/52373.Regarding_the_Pain_of_Others" target="_blank"><i>regarding the pain of others</i></a> by susan sontag</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<main>{{- block "main" . }}{{- end }}</main>
 		<footer>{{- partial "footer.html" . -}}</footer>

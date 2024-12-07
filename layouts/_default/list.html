@@ -4,33 +4,11 @@
 	<h3 style="user-select: none; -webkit-user-select: none; cursor: default;">{{ lower .Section }}</h3>
 {{ end }}
 
-<div>
-	{{ $seen := slice }}
-	{{ with .Site.GetPage "section" .Section }}
-	  {{ range .Pages }}
-		{{ range .Params.tags }}
-		  {{ $tag := . }}
-		  {{ if not (in $seen $tag) }}
-			{{ $seen = $seen | append $tag }}
-			<a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}">#{{ $tag }}</a>&nbsp;
-		  {{ end }}
-		{{ end }}
-	  {{ end }}
-	{{ end }}
-</div>
 
 <content>
-  {{ if .Data.Singular }}
-  <h3 style="margin-bottom:0">posts tagged with <i>{{ lower .Title }}</i></h3>
-  <small>
-    <a href="javascript:history.back()">remove</a>
-  </small>
-  {{ end }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <div>
-		{{ if or (.Draft) (.Params.soon) }}
-			{{ if not .Params.hidden }}
 				<div style="display: flex; cursor: default; align-items: center; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
 					<p class="post-date" style="text-align: center;"><i>
 						{{ if and (eq .Params.soon true) }}
@@ -46,24 +24,8 @@
 						<p class="post-title" style="cursor: not-allowed;">{{ .Title }}</p>
 					</div>
 				</div>
-			{{ end }}
-		{{ else }}
-			<div style="display: flex; cursor: default; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
-				<p class="post-date"><i>{{ .Date.Format "Jan 2, 2006" }}</i></p>
-				<div class="post-title-and-category-box">
-					<div style="display: none;" class="post-category-box">
-						<a href="{{ .Section }}" class="post-category"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
-					</div>
-					<p class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-				</div>
-			</div>
-		{{ end }}
 	</div>
-    {{ else }}
-    <li>
-      No posts yet
-    </li>
-    {{ end }}
+	{{ end }}
   </ul>
 </content>
 {{ end }}

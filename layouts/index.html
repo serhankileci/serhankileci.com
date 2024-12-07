@@ -1,52 +1,24 @@
 {{ define "main" }}
-<h3 style="user-select: none; -webkit-user-select: none; cursor: default;">latest</h3>
-<ul class="blog-posts content-home">
+<h3 class="select-none home-title">posts</h3>
+
+<table style="table-layout: fixed;" class="select-none cursor-default">
 	{{ $pages := where .Site.RegularPages "Title" "!=" "about" }}
 	{{ $pages = where $pages "Title" "!=" "categories" }}
 	{{ if $pages }}
 		{{ range last 10 $pages }}
-		<div>
-			{{ if or (.Draft) (.Params.soon) }}
-				{{ if not .Params.hidden }}
-					<div style="display: flex; cursor: default; align-items: center; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
-						<p class="post-date" style="text-align: center;"><i>
-							{{ if and (eq .Params.soon true) }}
-								soon
-							{{ else }}
-								draft
-							{{ end }}
-						</i></p>
-						<div class="post-title-and-category-box">
-							<div class="post-category-box">
-								<a href="{{ .Section }}" class="post-category"><i>#{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
-							</div>
-							<p class="post-title" style="cursor: not-allowed;">{{ .Title }}</p>
-						</div>
-					</div>
-				{{ end }}
-			{{ else }}
-				<div style="display: flex; cursor: default; gap: 2%; width: 100%; user-select: none; -webkit-user-select: none;">
-					<p class="post-date"><i>{{ .Date.Format "Jan 2, 2006" }}</i></p>
-					<div class="post-title-and-category-box">
-						<div class="post-category-box">
-							<a href="{{ .Section }}" class="post-category"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></a>
-						</div>
-						<p class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-					</div>
-				</div>
+			{{ if not (.Draft) }}
+					<tr>
+						<td>
+							<p style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><i>{{ slicestr (path.Dir .Page.Path) 1 }}</i></p>
+						</td>
+						<td style="padding-left: 2%;" class="title">
+							<a href="{{ .Page.Path }}" class="post-title select-text">{{ .Title }}</a>
+						</td>
+					</tr>
 			{{ end }}
-		</div>
 		{{ end }}
-		<!-- <div style="justify-items: center; display: grid; gap: 4%; margin-top: 8%;">
-			<p style="border-radius: 10rem; background-color: whitesmoke; width: 100%; opacity: 6%; height: 1.5rem;" />
-			<p style="border-radius: 5rem; background-color: whitesmoke; width: 80%; opacity: 5%; height: 1.3rem;" />
-			<p style="border-radius: 4rem; background-color: whitesmoke; width: 60%; opacity: 4%; height: 1.1rem;" />
-			<p style="border-radius: 3rem; background-color: whitesmoke; width: 40%; opacity: 3%; height: 0.9rem;" />
-			<p style="border-radius: 2rem; background-color: whitesmoke; width: 20%; opacity: 2%; height: 0.7rem;" />
-			<p style="border-radius: 1rem; background-color: whitesmoke; width: 10%; opacity: 1%; height: 0.5rem;" />
-		</div> -->
 	{{ else }}
 		<p>no posts yet</p>
 	{{ end }}
-</ul>
+</table>
 {{ end }}
