@@ -2,11 +2,12 @@
 	<h2 style="display: inline-block; margin: 0; padding: 0;">{{ .Site.Title }}</h2>
 </a> -->
 <div class="header-box">
-	<img class="avatar" src="/avatar.png" />
-	<div style="display: grid; justify-content: center;">
-		<h2 style="display: inline-block; margin: 0; padding: 0; cursor: default; user-select: none; -webkit-user-select: none;">{{ .Site.Title }}</h2>
-		<nav>{{- partial "nav.html" . -}}</nav>
+	<img class="avatar opacity-on-hover-s" style="cursor: pointer;" onclick="if (window.location.pathname !== '/') window.location.pathname = '/';" src="/avatar.png" />
+	<div class="site-title-subtitle">
+		<h2 class="opacity-on-hover-s" onclick="if (window.location.pathname !== '/') window.location.pathname = '/';" style="display: block; margin: 0; padding: 0; cursor: pointer; user-select: none; -webkit-user-select: none;">{{ .Site.Title }}</h2>
+		<p style="margin: 0; padding: 0;">writer, software developer</p>
 	</div>
+	<nav class="select-none cursor-default">{{- partial "nav.html" . -}}</nav>
 </div>
 
 <hr />

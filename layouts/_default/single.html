@@ -1,9 +1,9 @@
 {{ define "main" }}
 
-<h3 {{ if or (eq .Path "/categories") (eq .Path "/about") }} style="user-select: none; -webkit-user-select: none; cursor: default;" {{ end }}>{{ .Title }}</h3>
+<h3 {{ if (eq .Path "/categories") }} style="user-select: none; -webkit-user-select: none; cursor: default;" {{ end }}>{{ .Title }}</h3>
 <p><i style="margin: 0 0 4% 0">{{ .Section }}</i></p>
 <p style="margin: 0 0 3% 0">
-	{{ if and (ne .Path "/categories") (ne .Path "/about") }}
+	{{ if (ne .Path "/categories") }}
 		<i>
 			<time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
 				{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}

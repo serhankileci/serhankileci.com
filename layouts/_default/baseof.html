@@ -17,6 +17,8 @@
 		<link rel="%s" type="%s" href="%s" title="%s" />
 		` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}} {{- partial
 		"style.html" . -}}
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
 	</head>
 
 	<body>
@@ -24,20 +26,21 @@
 		<!-- being able to go back and forth between the same subject posts would be cool -->
 		<!-- {{ if or (.Prev) (.Next) }}
 		<div style="display: flex; justify-content: space-between; padding-top: 2%; padding-bottom: 2%;">
-			{{ if and (.Prev) (ne .Path "/categories") (ne .Path "/about") (ne .Path "/") }}
+			{{ if and (.Prev) (ne .Path "/categories") (ne .Path "/") }}
 				<a href="{{ .Prev.Permalink }}" style="cursor: default; user-select: none; -webkit-user-select: none;">previous</a>
 			{{ end }}
-			{{ if and (.Next) (ne .Path "/categories") (ne .Path "/about") (ne .Path "/") }}
+			{{ if and (.Next) (ne .Path "/categories") (ne .Path "/") }}
 				<a href="{{ .Next.Permalink }}" style="cursor: default; user-select: none; -webkit-user-select: none;">next</a>
 			{{ end }}
 		</div>
 		{{ end }} -->
 		</div>
-		<div style="display: grid; gap: 14%">
-			<div style="display: flex; justify-content: center;">
-				<div style="font-size: small; user-select: none; -webkit-user-select: none; cursor: default;">
-					<p>currently reading <a class="cursor-pointer" href="https://www.goodreads.com/book/show/52373.Regarding_the_Pain_of_Others" target="_blank"><i>regarding the pain of others</i></a> by susan sontag</p>
-				</div>
+		<div class="desc">
+			<p style="font-size: small; user-select: none; -webkit-user-select: none; cursor: default;">currently reading <a class="cursor-pointer" href="https://www.goodreads.com/book/show/52373.Regarding_the_Pain_of_Others" target="_blank"><i>regarding the pain of others</i></a> by susan sontag</p>
+			<div class="social">
+				<img onclick="window.open('https://open.spotify.com/user/cole8riley?si=09f53e9a4b1048af');" class="nav-icon opacity-on-hover" src="/spotify.png" />
+				<img onclick="window.open('https://instagram.com/serhankileci');" class="nav-icon opacity-on-hover" src="/instagram.png" />
+				<img onclick="window.open('mailto:serhanselimkileci@gmail.com');" src="/mail.png" class="opacity-on-hover nav-icon" style="text-decoration: none; color: initial;" />
 			</div>
 		</div>
 		<main>{{- block "main" . }}{{- end }}</main>

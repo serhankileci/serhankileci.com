@@ -2,7 +2,7 @@
 <h3 class="select-none home-title">posts</h3>
 
 <table style="table-layout: fixed;" class="select-none cursor-default">
-	{{ $pages := where .Site.RegularPages "Title" "!=" "about" }}
+	{{ $pages := .Site.RegularPages }}
 	{{ $pages = where $pages "Title" "!=" "categories" }}
 	{{ $pages = where $pages "Draft" "!=" true }}
 	{{ if gt (len $pages) 0 }}

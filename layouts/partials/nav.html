@@ -1,7 +1,3 @@
 <!-- {{ range .Site.Menus.main }}
 <a style="user-select: none; -webkit-user-select: none; cursor: pointer;" href="{{ .URL }}">{{ .Name }}</a>
 {{ end }} -->
-
-<a href="/"{{ if eq .Path "/" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>home</a>
-<a href="/about"{{ if eq .Path "/about" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>about</a>
-<!-- <a href="/categories"{{ if eq .Path "/categories" }} style="font-weight: bold; pointer-events: none; cursor: default;"{{ end }}>categories</a> -->
